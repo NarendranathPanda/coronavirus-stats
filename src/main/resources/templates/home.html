@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title th:text="${title}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta http-equiv="refresh" content="30">
+</head>
+
+<body>
+<div class="container">
+    <h1 th:text="${title}"></h1>
+    <p th:text="${description}"></p>
+
+
+    <div class="jumbotron">
+        <h1 class="display-4" th:text="${noOfcsvObjects}"></h1> (<span style="color:red"
+                                                                       th:text="${totalNoOfIncreasedCases}"></span>)
+        <p class="lead" th:text="${lastFetchTime}"></p>
+        <hr class="my-4">
+    </div>
+
+
+    <div>
+
+        <a th:href="${url}"> download </a>
+        <table class="table">
+            <tr>
+                <th th:text="${columnOne}"></th>
+                <th th:text="${columnTwo}"></th>
+                <th th:text="${columnThree}"></th>
+                <th th:text="${columnFour}"></th>
+
+            </tr>
+            <tr th:each="csvObject : ${csvObjects}">
+                <td th:text="${csvObject.columnOne}"></td>
+                <td th:text="${csvObject.columnTwo}"></td>
+                <td th:text="${csvObject.columnThree}"></td>
+                <td th:text="${csvObject.columnFour}" style="color:red"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+
+

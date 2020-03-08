@@ -1,0 +1,9 @@
+logging.level.root=ERROR
+logging.level.io.n4b=TRACE
+
+csvUrl=http://jenkins.daaas.dynamic.nsn-net.net:8080/job/PMO/job/Pull_NDAC_GIT_issue_Data/lastSuccessfulBuild/artifact/GitIssuesReport.csv
+title=GitIssues Tracker Application
+description=This application lists the current number of git issues reported
+columnOne=Id
+columnTwo=Title
+columnThree=Others
