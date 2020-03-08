@@ -18,7 +18,7 @@ public class CsVTask {
     @Autowired
     CsvProcessingService service;
 
-    @Scheduled(cron = "30 * * * * *")
+    @Scheduled(cron = "* * 1 * * *")
     public void processGitIssue() throws IOException, InterruptedException {
         int noOfRecord = service.processCsv();
         logger.info("No of Records: " + noOfRecord);
