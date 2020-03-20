@@ -11,3 +11,6 @@ cd  coronavirus-stats
 mvn clean install
 mvn spring-boot:run
 ```
+output at http://localhost:8080
+
+![Outpu](ui.PNG)
